@@ -1,0 +1,38 @@
+# HB Brickworks
+
+> Brickwork done right, first time.
+
+HB Brickworks is a Basingstoke-based brickwork partnership serving homeowners, developers, and contractors across Hampshire and within approximately one hour of Basingstoke. The business is run by two experienced tradesmen with over a decade of hands-on brickwork experience across domestic and commercial projects. No subcontracted crews — the people you speak to are the people on site.
+
+## Services
+
+- [General Brickwork](https://www.brickhausltd.co.uk/services/brickwork): Boundary walls, facades, repointing, and feature detailing with precise, well-finished results.
+- [Patios & Block Paving](https://www.brickhausltd.co.uk/services/patios): Brick and block paving in herringbone, basket-weave, stretcher, and bespoke layouts with proper falls, drainage, and edging.
+- [Garden Walls & Boundaries](https://www.brickhausltd.co.uk/services/garden-walls): Bespoke garden walls, boundary walls, retaining walls, and decorative brickwork.
+- [New Builds & Extensions](https://www.brickhausltd.co.uk/services/new-builds): Full brickwork packages for new build homes and extensions, working alongside main contractors or directly with homeowners.
+- [Restoration & Repointing](https://www.brickhausltd.co.uk/services/restoration): Sympathetic brick replacement and repointing on period and modern properties, crack repair, sill and coping replacement.
+
+## Pages
+
+- [Home](https://www.brickhausltd.co.uk/): Landing page with hero, service overview, testimonials, and call to action.
+- [About](https://www.brickhausltd.co.uk/about): Background on the partnership, experience, values, and working approach.
+- [Services](https://www.brickhausltd.co.uk/services): Overview of all five service categories with links to individual service pages.
+- [Contact](https://www.brickhausltd.co.uk/contact): Contact form for project enquiries and quotes.
+
+## Key Facts
+
+- Location: Basingstoke, Hampshire, UK
+- Service area: Approximately one-hour radius from Basingstoke, covering Hampshire and beyond
+- Team: Two experienced tradesmen/partners
+- Experience: Over a decade of hands-on brickwork
+- Client types: Homeowners, builders/contractors, developers
+- Email: bowya1990@hotmail.co.uk
+
+## Values
+
+- Direct accountability from quote to final clean-down
+- Honest pricing and transparent quotes
+- Tidy, well-managed sites
+- Quality materials — good bricks, proper mortar mix
+- No subcontracted crews
+- Works to architects' details, builders' specs, or client ideas

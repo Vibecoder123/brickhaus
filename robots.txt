@@ -1,0 +1,9 @@
+# robots.txt for HB Brickworks
+# https://www.brickhausltd.co.uk
+
+User-agent: *
+Allow: /
+Disallow: /__l5e/
+Disallow: /~api/
+
+Sitemap: https://www.brickhausltd.co.uk/sitemap.xml
