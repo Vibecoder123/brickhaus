@@ -288,12 +288,24 @@ input, select, textarea { font: inherit; }
   overflow: hidden;
 }
 
-/* Main dark background */
+/* Main background — real image with zoom-out animation */
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: var(--black);
+  background-image: url('images/brick_house_image.jpg');
+  background-size: cover;
+  background-position: center 30%;
   z-index: 0;
+  animation: heroZoomOut 10s ease-out forwards;
+}
+
+/* Dark overlay so text stays legible over the photo */
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
 /* Diagonal accent panel — blue slice, bottom-right */
@@ -329,6 +341,7 @@ input, select, textarea { font: inherit; }
   right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  z-index: 2;
 }
 
 .hero__content {
@@ -483,6 +496,11 @@ input, select, textarea { font: inherit; }
 @keyframes scrollPulse {
   0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
   50%       { opacity: 0.3; transform: translateX(-50%) translateY(8px); }
+}
+
+@keyframes heroZoomOut {
+  from { transform: scale(1.15); }
+  to   { transform: scale(1.0); }
 }
 
 /* --- SERVICES ---------------------------------------------- */
