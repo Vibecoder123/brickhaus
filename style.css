@@ -185,6 +185,20 @@ input, select, textarea { font: inherit; }
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
+.header__tagline {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1E6BFF;
+  white-space: nowrap;
+  margin-right: auto;
+  padding-left: 20px;
+  border-left: 1px solid var(--grey-border);
+  margin-left: 20px;
+}
+
 .header__inner {
   height: 100%;
   display: flex;
@@ -1046,6 +1060,10 @@ input, select, textarea { font: inherit; }
   /* Mobile nav */
   .nav-toggle {
     display: flex;
+  }
+
+  .header__tagline {
+    display: none;
   }
 
   .nav {
