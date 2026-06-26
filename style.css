@@ -526,6 +526,23 @@ input, select, textarea { font: inherit; }
   background-attachment: fixed;
 }
 
+.services .section__header {
+  background: rgba(0, 0, 0, 0.55);
+  display: block;
+  text-align: center;
+  padding: 28px 48px;
+  border-radius: 12px;
+  margin-bottom: 48px;
+}
+
+.services .section__heading {
+  color: #ffffff;
+}
+
+.services .section__sub {
+  color: #ffffff;
+}
+
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -749,6 +766,8 @@ input, select, textarea { font: inherit; }
 .project-card__img {
   position: absolute;
   inset: 0;
+  background-size: cover;
+  background-position: center;
   transition: background var(--transition);
 }
 
