@@ -519,13 +519,21 @@ input, select, textarea { font: inherit; }
 
 /* --- SERVICES ---------------------------------------------- */
 .services {
-  background: var(--grey-light);
+  position: relative;
+  background-image: url('images/Brick_pier1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 860px;
+  margin: 0 auto;
   gap: 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .service-card {
