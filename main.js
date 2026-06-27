@@ -277,4 +277,71 @@
     animateOnScroll();
   }
 
+  /* --- LIGHTBOX -------------------------------------------- */
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg   = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev  = document.getElementById('lightboxPrev');
+  const lightboxNext  = document.getElementById('lightboxNext');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+
+  let currentImages = [];
+  let currentIndex  = 0;
+
+  const openLightbox = (images, index) => {
+    currentImages = images;
+    currentIndex  = index;
+    showImage();
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  };
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+  };
+
+  const showImage = () => {
+    lightboxImg.src = currentImages[currentIndex];
+    lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    lightboxPrev.style.display = currentImages.length <= 1 ? 'none' : '';
+    lightboxNext.style.display = currentImages.length <= 1 ? 'none' : '';
+  };
+
+  const prevImage = () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showImage();
+  };
+
+  const nextImage = () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    showImage();
+  };
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const images = JSON.parse(card.dataset.gallery || '[]');
+      if (images.length) openLightbox(images, 0);
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxPrev)  lightboxPrev.addEventListener('click', prevImage);
+  if (lightboxNext)  lightboxNext.addEventListener('click', nextImage);
+
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox || lightbox.hidden) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  });
+
+
 })();
