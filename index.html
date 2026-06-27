@@ -406,28 +406,30 @@
           <p class="section__sub section__sub--muted">A selection of completed projects — more coming soon.</p>
         </div>
         <div class="projects__grid">
-          <article class="project-card">
-            <div class="project-card__img" style="background-image: url('images/Brick_porch2.jpeg');"></div>
-            <div class="project-card__overlay">
-              <h3 class="project-card__title">Residential Extension</h3>
-              <p class="project-card__type">Residential · Brickwork</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card__img" style="background-image: url('images/Office_project.jpeg');"></div>
-            <div class="project-card__overlay">
-              <h3 class="project-card__title">Commercial Conversion</h3>
-              <p class="project-card__type">Commercial · Project Management</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card__img" style="background-image: url('images/reno.jpeg');"></div>
-            <div class="project-card__overlay">
-              <h3 class="project-card__title">Full Property Renovation</h3>
-              <p class="project-card__type">Residential · Renovation</p>
-            </div>
-          </article>
-        </div>
+          <article class="project-card" data-gallery='["images/Brick_porch2.jpeg","images/Brick_side1.jpeg","images/Brick_side2.jpeg"]'>
+  <div class="project-card__img" style="background-image: url('images/Brick_porch2.jpeg');"></div>
+  <div class="project-card__overlay">
+    <h3 class="project-card__title">Residential Extension</h3>
+    <p class="project-card__type">Residential · Brickwork</p>
+  </div>
+</article>
+
+<article class="project-card" data-gallery='["images/Office_project.jpeg","images/Brickwall_1.jpeg","images/Brickwall_2.jpeg","images/Brickwall_3.jpeg"]'>
+  <div class="project-card__img" style="background-image: url('images/Office_project.jpeg');"></div>
+  <div class="project-card__overlay">
+    <h3 class="project-card__title">Commercial Conversion</h3>
+    <p class="project-card__type">Commercial · Brickwork</p>
+  </div>
+</article>
+
+<article class="project-card" data-gallery='["images/reno.jpeg","images/Bricky_1.jpeg","images/Bricky_2.jpeg"]'>
+  <div class="project-card__img" style="background-image: url('images/reno.jpeg');"></div>
+  <div class="project-card__overlay">
+    <h3 class="project-card__title">Full Property Renovation</h3>
+    <p class="project-card__type">Residential · Renovation</p>
+  </div>
+</article>
+
         <p class="projects__note">Photos coming soon — projects currently in progress.</p>
       </div>
     </section>
@@ -563,5 +565,17 @@
   </footer>
 
   <script src="main.js"></script>
+  
+  <!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Project gallery" hidden>
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close gallery">&#x2715;</button>
+  <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+  <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  <div class="lightbox__img-wrap">
+    <img class="lightbox__img" id="lightboxImg" src="" alt="Project photo" />
+  </div>
+  <p class="lightbox__counter" id="lightboxCounter"></p>
+</div>
+
 </body>
 </html>
