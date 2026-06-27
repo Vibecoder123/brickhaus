@@ -526,6 +526,13 @@ input, select, textarea { font: inherit; }
   background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+  .services {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+}
+
 .services .section__header {
   background: rgba(0, 0, 0, 0.55);
   display: block;
