@@ -65,12 +65,12 @@
     });
   });
 
-  /* --- CONTACT FORM (client-side only placeholder) --------- */
+  /* --- CONTACT FORM --------- */
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
 
   if (contactForm && formSuccess) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       if (!contactForm.checkValidity()) {
@@ -84,16 +84,29 @@
         submitBtn.textContent = 'Sending…';
       }
 
-      // Placeholder — replace with fetch() to Cloudflare Worker
-      setTimeout(() => {
+      const formData = new FormData(contactForm);
+      formData.append('_replyto', formData.get('email'));
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: contactForm.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (!response.ok) throw new Error('Formspree submission failed');
+
         formSuccess.hidden = false;
         formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         contactForm.reset();
+      } catch (err) {
+        alert("Sorry, something went wrong sending your enquiry. Please call us directly on 07917 426920, or try again in a moment.");
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send Enquiry';
         }
-      }, 800);
+      }
     });
   }
 
