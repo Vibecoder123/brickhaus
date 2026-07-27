@@ -868,6 +868,22 @@ input, select, textarea { font: inherit; }
   color: var(--blue);
 }
 
+.contact__phone-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact__phone-number {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  transition: color var(--transition);
+}
+
+.contact__phone-number:hover {
+  color: var(--blue);
+}
+
 /* Form */
 .contact__form {
   display: grid;
