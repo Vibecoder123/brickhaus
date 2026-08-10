@@ -339,6 +339,16 @@
     });
   });
 
+document.querySelectorAll('.project-card').forEach(card => {
+  const images = JSON.parse(card.dataset.gallery || '[]');
+  if (images.length > 1) {
+    const badge = document.createElement('span');
+    badge.className = 'project-card__badge';
+    badge.textContent = `${images.length} photos`;
+    card.appendChild(badge);
+  }
+});
+   
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightboxPrev)  lightboxPrev.addEventListener('click', prevImage);
   if (lightboxNext)  lightboxNext.addEventListener('click', nextImage);
