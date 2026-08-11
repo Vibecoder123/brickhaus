@@ -834,6 +834,13 @@ input, select, textarea { font: inherit; }
   letter-spacing: 0.04em;
 }
 
+@media (hover: none) {
+  .project-card__overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .projects__note {
   text-align: center;
   margin-top: 40px;
